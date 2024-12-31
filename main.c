@@ -10,7 +10,7 @@ int createGTKApp(int argc, char *argv[]){
     int status = 0;
     GtkApplication *app = NULL;
 
-    app = gtk_application_new("com.uwu.hellenkellersimulator", G_APPLICATION_DEFAULT_FLAGS);
+    app = gtk_application_new("com.uwu.helenkellersimulator", G_APPLICATION_DEFAULT_FLAGS);
     g_signal_connect(app, "activate", G_CALLBACK(startApp), NULL);
     status = g_application_run(G_APPLICATION(app), argc, argv);
 
@@ -28,7 +28,7 @@ static void startApp(GtkApplication *app, gpointer data){
 
     gtk_window_maximize(GTK_WINDOW(window));
     gtk_window_set_application(GTK_WINDOW(window), app);
-    gtk_window_set_title(GTK_WINDOW(window), "Hellen Keller Simulator");
+    gtk_window_set_title(GTK_WINDOW(window), "Helen Keller Simulator");
 
     gtk_widget_set_visible(GTK_WIDGET(window), TRUE);
     g_object_unref(builder);
